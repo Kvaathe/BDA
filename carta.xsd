@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <xs:import namespace="http://www.w3.org/2001/XMLSchema-instance" schemaLocation="xsi.xsd"/>
+
+  <xs:element name="nombre" type="xs:string"/>
+  <xs:element name="alergia" type="xs:string"/>
+  <xs:element name="precio" type="xs:integer"/>  
+ 
+  <xs:element name="pplato">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="nombre"/>
+        <xs:element ref="alergia" minOccurs="1" maxOccurs="14"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="splato">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="nombre"/>
+        <xs:element ref="alergia" minOccurs="1" maxOccurs="14"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="tplato">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="nombre"/>
+        <xs:element ref="alergia" minOccurs="1" maxOccurs="14"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="primer_plato">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="nombre"/>
+        <xs:element ref="pplato" minOccurs="1" maxOccurs="3"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="segundo_plato">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="nombre"/>
+        <xs:element ref="splato" minOccurs="1" maxOccurs="3"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="tercer_plato">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="nombre"/>
+        <xs:element ref="tplato" minOccurs="1" maxOccurs="10"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="menu">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="nombre"/>
+        <xs:element ref="precio"/>
+        <xs:element ref="primer_plato"/>
+        <xs:element ref="segundo_plato"/>
+        <xs:element ref="tercer_plato"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="menus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="menu" minOccurs="1" maxOccurs="6"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="carta">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="menus"/>
+      </xs:sequence>
+      <xs:attribute ref="xsi:noNamespaceSchemaLocation" use="required"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
