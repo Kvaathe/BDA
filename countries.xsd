@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+<regions>
+  <region id="1">
+    <name>Europe</name>
+    <countries_list>
+      <countries>
+        <country>
+          <COUNTRY_NAME>Belgium</COUNTRY_NAME>
+        </country>
+        <country>
+          <COUNTRY_NAME>Switzerland</COUNTRY_NAME>
+        </country>
+        <country>
+          <COUNTRY_NAME>Germany</COUNTRY_NAME>
+        </country>
+        <country>
+          <COUNTRY_NAME>Denmark</COUNTRY_NAME>
+        </country>
+        <country>
+          <COUNTRY_NAME>France</COUNTRY_NAME>
+        </country>
+        <country>
+          <COUNTRY_NAME>Italy</COUNTRY_NAME>
+        </country>
+        <country>
+          <COUNTRY_NAME>Netherlands</COUNTRY_NAME>
+        </country>
+        <country>
+          <COUNTRY_NAME>United Kingdom</COUNTRY_NAME>
+        </country>
+      </countries>
+    </countries_list>
+  </region>
+  <region id="2">
+    <name>Americas</name>
+    <countries_list>
+      <countries>
+        <country>
+          <COUNTRY_NAME>Argentina</COUNTRY_NAME>
+        </country>
+        <country>
+          <COUNTRY_NAME>Brazil</COUNTRY_NAME>
+        </country>
+        <country>
+          <COUNTRY_NAME>Canada</COUNTRY_NAME>
+        </country>
+        <country>
+          <COUNTRY_NAME>Mexico</COUNTRY_NAME>
+        </country>
+        <country>
+          <COUNTRY_NAME>United States of America</COUNTRY_NAME>
+        </country>
+      </countries>
+    </countries_list>
+  </region>
+  <region id="3">
+    <name>Asia</name>
+    <countries_list>
+      <countries>
+        <country>
+          <COUNTRY_NAME>Australia</COUNTRY_NAME>
+        </country>
+        <country>
+          <COUNTRY_NAME>China</COUNTRY_NAME>
+        </country>
+        <country>
+          <COUNTRY_NAME>India</COUNTRY_NAME>
+        </country>
+        <country>
+          <COUNTRY_NAME>Japan</COUNTRY_NAME>
+        </country>
+        <country>
+          <COUNTRY_NAME>Malaysia</COUNTRY_NAME>
+        </country>
+        <country>
+          <COUNTRY_NAME>Singapore</COUNTRY_NAME>
+        </country>
+      </countries>
+    </countries_list>
+  </region>
+  <region id="4">
+    <name>Middle East and Africa</name>
+    <countries_list>
+      <countries>
+        <country>
+          <COUNTRY_NAME>Egypt</COUNTRY_NAME>
+        </country>
+        <country>
+          <COUNTRY_NAME>Israel</COUNTRY_NAME>
+        </country>
+        <country>
+          <COUNTRY_NAME>Kuwait</COUNTRY_NAME>
+        </country>
+        <country>
+          <COUNTRY_NAME>Nigeria</COUNTRY_NAME>
+        </country>
+        <country>
+          <COUNTRY_NAME>Zambia</COUNTRY_NAME>
+        </country>
+        <country>
+          <COUNTRY_NAME>Zimbabwe</COUNTRY_NAME>
+        </country>
+      </countries>
+    </countries_list>
+  </region>
+</regions>
