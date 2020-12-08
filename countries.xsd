@@ -1,106 +1,30 @@
-<?xml version="1.0"?>
-<regions>
-  <region id="1">
-    <name>Europe</name>
-    <countries_list>
-      <countries>
-        <country>
-          <COUNTRY_NAME>Belgium</COUNTRY_NAME>
-        </country>
-        <country>
-          <COUNTRY_NAME>Switzerland</COUNTRY_NAME>
-        </country>
-        <country>
-          <COUNTRY_NAME>Germany</COUNTRY_NAME>
-        </country>
-        <country>
-          <COUNTRY_NAME>Denmark</COUNTRY_NAME>
-        </country>
-        <country>
-          <COUNTRY_NAME>France</COUNTRY_NAME>
-        </country>
-        <country>
-          <COUNTRY_NAME>Italy</COUNTRY_NAME>
-        </country>
-        <country>
-          <COUNTRY_NAME>Netherlands</COUNTRY_NAME>
-        </country>
-        <country>
-          <COUNTRY_NAME>United Kingdom</COUNTRY_NAME>
-        </country>
-      </countries>
-    </countries_list>
-  </region>
-  <region id="2">
-    <name>Americas</name>
-    <countries_list>
-      <countries>
-        <country>
-          <COUNTRY_NAME>Argentina</COUNTRY_NAME>
-        </country>
-        <country>
-          <COUNTRY_NAME>Brazil</COUNTRY_NAME>
-        </country>
-        <country>
-          <COUNTRY_NAME>Canada</COUNTRY_NAME>
-        </country>
-        <country>
-          <COUNTRY_NAME>Mexico</COUNTRY_NAME>
-        </country>
-        <country>
-          <COUNTRY_NAME>United States of America</COUNTRY_NAME>
-        </country>
-      </countries>
-    </countries_list>
-  </region>
-  <region id="3">
-    <name>Asia</name>
-    <countries_list>
-      <countries>
-        <country>
-          <COUNTRY_NAME>Australia</COUNTRY_NAME>
-        </country>
-        <country>
-          <COUNTRY_NAME>China</COUNTRY_NAME>
-        </country>
-        <country>
-          <COUNTRY_NAME>India</COUNTRY_NAME>
-        </country>
-        <country>
-          <COUNTRY_NAME>Japan</COUNTRY_NAME>
-        </country>
-        <country>
-          <COUNTRY_NAME>Malaysia</COUNTRY_NAME>
-        </country>
-        <country>
-          <COUNTRY_NAME>Singapore</COUNTRY_NAME>
-        </country>
-      </countries>
-    </countries_list>
-  </region>
-  <region id="4">
-    <name>Middle East and Africa</name>
-    <countries_list>
-      <countries>
-        <country>
-          <COUNTRY_NAME>Egypt</COUNTRY_NAME>
-        </country>
-        <country>
-          <COUNTRY_NAME>Israel</COUNTRY_NAME>
-        </country>
-        <country>
-          <COUNTRY_NAME>Kuwait</COUNTRY_NAME>
-        </country>
-        <country>
-          <COUNTRY_NAME>Nigeria</COUNTRY_NAME>
-        </country>
-        <country>
-          <COUNTRY_NAME>Zambia</COUNTRY_NAME>
-        </country>
-        <country>
-          <COUNTRY_NAME>Zimbabwe</COUNTRY_NAME>
-        </country>
-      </countries>
-    </countries_list>
-  </region>
-</regions>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="regions" type="regionsType"/>
+  <xs:complexType name="countryType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="COUNTRY_NAME"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="countriesType">
+    <xs:sequence>
+      <xs:element type="countryType" name="country" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="countries_listType">
+    <xs:sequence>
+      <xs:element type="countriesType" name="countries"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="regionType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="name"/>
+      <xs:element type="countries_listType" name="countries_list"/>
+    </xs:sequence>
+    <xs:attribute type="xs:byte" name="id" use="optional"/>
+  </xs:complexType>
+  <xs:complexType name="regionsType">
+    <xs:sequence>
+      <xs:element type="regionType" name="region" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
